@@ -33,13 +33,17 @@ class _ExpensesState extends State<Expenses> {
   @override
   Widget build(context) {
     return Scaffold(
-        body: Column(
-      children: [
-        Text("Here should be the chart somehow!"),
-        Expanded(
-          child: ExpensesList(expenses: _registeredExpenses),
+        appBar: AppBar(
+          title: Text("Expense Tracker"),
+          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.add))],
         ),
-      ],
-    ));
+        body: Column(
+          children: [
+            Text("Here should be the chart somehow!"),
+            Expanded(
+              child: ExpensesList(expenses: _registeredExpenses),
+            ),
+          ],
+        ));
   }
 }
